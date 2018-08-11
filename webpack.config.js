@@ -1,15 +1,24 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+
 const webpackConfig = {
   entry: './src/index.ts',
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: __dirname + '/dist',
   },
 
   devtool: 'source-map',
+  devServer: {
+    contentBase: './dist',
+    hot: true,
+  },
 
   resolve: {
     extensions: ['.ts', '.js', '.json'],
   },
+
+  plugins: [new HtmlWebpackPlugin({ title: 'CHANGEME' }), new webpack.HotModuleReplacementPlugin()],
 
   module: {
     rules: [
