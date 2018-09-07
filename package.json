@@ -14,14 +14,16 @@
     "url": "https://github.com/mdnorman/CHANGEME/issues"
   },
   "scripts": {
+    "clean": "rm -rf dist && rm -rf out",
     "build": "webpack --mode production",
     "build:development": "webpack --mode development",
-    "prepare": "pretty-quick --stage && tsc",
-    "pretest": "pretty-quick --stage && tsc && tsc -p spec/tsconfig.json && webpack --mode production",
+    "prepare": "tsc",
+    "pretest": "&& tsc -p spec/tsconfig.json && webpack --mode production",
     "test": "jasmine",
     "test:integration": "npm run pretest && jasmine --config=spec/support/jasmine-integration.json",
     "posttest": "npm run lint",
     "lint": "tslint -c tslint.json --project tsconfig.json && tslint -c tslint.json --project spec/tsconfig.json",
+    "pretty": "pretty-quick --stage",
     "server:development": "node dev-server.js"
   },
   "dependencies": {},
@@ -39,6 +41,7 @@
     "sass-loader": "7.1.0",
     "source-map-loader": "0.2.3",
     "style-loader": "0.22.1",
+    "ts-node": "7.0.1",
     "tslint": "5.11.0",
     "tslint-config-airbnb": "5.9.2",
     "tslint-react": "3.6.0",
