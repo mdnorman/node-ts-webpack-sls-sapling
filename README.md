@@ -28,7 +28,9 @@ Many popular IDEs and editors support this out of the box or with a plugin.
 npm run server:development
 ```
 
-The server runs at [http://localhost:5000/]
+The server runs at [http://localhost:5000/].
+
+The port can be changed by setting the environment variable `WEBPACK_SERVER_PORT` to an open port.
 
 ### Prettier
 
