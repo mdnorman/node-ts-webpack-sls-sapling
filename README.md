@@ -22,6 +22,14 @@ Many popular IDEs and editors support this out of the box or with a plugin.
 
 ## Development
 
+### Running the Local Server
+
+```
+npm run server:development
+```
+
+The server runs at [http://localhost:5000/]
+
 ### Prettier
 
 This project uses [Prettier], so please run it before checking in:
@@ -64,10 +72,19 @@ npm run test:integration
 
 ## Building
 
+### Development
+
+```
+npm run build:development
+```
+
+### Production
+
 ```
 npm run build
 ```
 
+[http://localhost:5000/]: http://localhost:5000/
 [editorconfig]: https://editorconfig.org/
 [jasmine]: https://jasmine.github.io/
 [prettier]: https://prettier.io/
