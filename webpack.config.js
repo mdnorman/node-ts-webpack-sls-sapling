@@ -77,6 +77,7 @@ const webpackConfig = (env, argv) => {
             'sass-loader?sourceMap',
           ],
         },
+        { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader' },
       ],
     },
   };

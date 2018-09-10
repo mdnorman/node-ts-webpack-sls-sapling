@@ -26,7 +26,9 @@
     "posttest": "npm run lint",
     "lint": "tslint -c tslint.json --project tsconfig.json && tslint -c tslint.json --project spec/tsconfig.json",
     "pretty": "pretty-quick --stage",
-    "server:development": "node dev-server.js"
+    "server:development": "node dev-server.js",
+    "deploy": "serverless deploy -v --stage prod && serverless client deploy -v --no-confirm --no-delete-contents --stage prod",
+    "deploy:test": "serverless deploy -v --stage test && serverless client deploy -v --no-confirm --no-delete-contents --stage test"
   },
   "dependencies": {},
   "devDependencies": {
@@ -41,6 +43,8 @@
     "pretty-quick": "1.6.0",
     "resolve-url-loader": "2.3.0",
     "sass-loader": "7.1.0",
+    "serverless": "1.30.3",
+    "serverless-finch": "2.3.2",
     "source-map-loader": "0.2.3",
     "style-loader": "0.22.1",
     "ts-node": "7.0.1",
