@@ -1,17 +1,28 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const webpack = require('webpack');
 
-const webpackConfig = (env, argv) => {
+const webpackConfig = env => {
   const { mode } = env;
   const production = mode === 'production';
   const development = !production;
+  const analyze = false;
   const filename = production ? '[name].[chunkhash].bundle.js' : '[name].[hash].bundle.js';
 
   const plugins = [new HtmlWebpackPlugin({ template: 'src/index.html.ejs' })];
 
   if (development) {
     plugins.push(new webpack.HotModuleReplacementPlugin());
+  }
+
+  if (analyze) {
+    plugins.push(
+      new BundleAnalyzerPlugin({
+        analyzerMode: 'static',
+        reportFilename: 'bundle_report.html',
+      }),
+    );
   }
 
   return {
