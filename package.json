@@ -29,10 +29,7 @@
     "deploy": "serverless deploy -v --stage test && serverless client deploy -v --no-confirm --no-delete-contents --stage test",
     "deploy:prod": "serverless deploy -v --stage prod && serverless client deploy -v --no-confirm --no-delete-contents --stage prod"
   },
-  "dependencies": {
-    "jasmine": "3.3.1",
-    "prettier": "1.16.4"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/jasmine": "3.3.8",
     "@types/node": "10.12.21",
