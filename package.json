@@ -54,7 +54,7 @@
     "tsutils": "3.21.0",
     "typescript": "4.3.5",
     "url-loader": "4.1.1",
-    "webpack": "4.42.1",
+    "webpack": "4.46.0",
     "webpack-bundle-analyzer": "3.6.1",
     "webpack-command": "0.5.1",
     "webpack-dev-server": "3.10.3"
