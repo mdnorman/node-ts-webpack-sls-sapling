@@ -3,7 +3,7 @@ const path = require('path');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const webpack = require('webpack');
 
-const webpackConfig = env => {
+const webpackConfig = (env) => {
   const { mode } = env;
   const production = mode === 'production';
   const development = !production;
@@ -60,7 +60,7 @@ const webpackConfig = env => {
 
     module: {
       rules: [
-        { test: /\.ts?$/, loader: 'awesome-typescript-loader' },
+        { test: /\.ts?$/, loader: 'ts-loader' },
         { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
         {
           test: /\.css$/,
