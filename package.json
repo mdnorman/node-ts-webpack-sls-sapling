@@ -24,7 +24,7 @@
     "test:integration": "npm run pretest && jasmine --config=spec/support/jasmine-integration.json",
     "posttest": "npm run lint",
     "lint": "eslint",
-    "pretty": "pretty-quick --stage",
+    "pretty": "pretty-quick"
     "server:development": "node dev-server.js",
     "deploy": "serverless deploy -v --stage test && serverless client deploy -v --no-confirm --no-delete-contents --stage test",
     "deploy:prod": "serverless deploy -v --stage prod && serverless client deploy -v --no-confirm --no-delete-contents --stage prod"
