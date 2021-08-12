@@ -5,7 +5,7 @@ plugins:
 
 provider:
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs14.x
   profile: serverless
   stage: test
   region: us-east-1
@@ -31,11 +31,11 @@ custom:
   domainNameStage:
     test: test.${self:custom.baseDomainName}
     prod: www.${self:custom.baseDomainName}
-  baseDomainName: CHANGEME.com
+  baseDomainName: ${custom.hostedZone}
+  hostedZone: CHANGEME.com
   logs:
     bucket: CHANGEME
     path: websites/${self:service.name}/${self:custom.stage}/cloudfront
-
 
 resources:
   Resources:
@@ -104,15 +104,15 @@ resources:
     WebAppDomainName:
       Type: AWS::Route53::RecordSetGroup
       Properties:
-        HostedZoneName: ${self:custom.baseDomainName}.
+        HostedZoneName: ${self:custom.hostedZone}.
         RecordSets:
           - Name: ${self:custom.domainName}.
             Type: CNAME
             TTL: 60
             ResourceRecords:
               - Fn::GetAtt:
-                - WebAppCloudFrontDistribution
-                - DomainName
+                  - WebAppCloudFrontDistribution
+                  - DomainName
 
   ## In order to print out the hosted domain via `serverless info` we need to define the DomainName output for CloudFormation
   Outputs:
