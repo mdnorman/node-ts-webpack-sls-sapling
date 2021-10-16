@@ -48,7 +48,7 @@
     "serverless-finch": "2.6.0",
     "source-map-loader": "3.0.0",
     "style-loader": "3.3.0",
-    "ts-jest": "27.0.5",
+    "ts-jest": "27.0.7",
     "ts-loader": "9.2.6",
     "ts-node": "10.2.1",
     "tsutils": "3.21.0",
