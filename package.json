@@ -30,7 +30,7 @@
     "deploy:prod": "serverless deploy -v --stage prod && serverless client deploy -v --no-confirm --no-delete-contents --stage prod"
   },
   "devDependencies": {
-    "@types/jest": "27.0.2",
+    "@types/jest": "27.0.3",
     "@types/node": "16.4.5",
     "@typescript-eslint/eslint-plugin": "5.1.0",
     "@typescript-eslint/parser": "5.1.0",
