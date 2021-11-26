@@ -26,8 +26,8 @@
     "lint": "eslint",
     "pretty": "pretty-quick",
     "server:development": "node dev-server.js",
-    "deploy": "serverless deploy -v --stage test && serverless client deploy -v --no-confirm --no-delete-contents --stage test",
-    "deploy:prod": "serverless deploy -v --stage prod && serverless client deploy -v --no-confirm --no-delete-contents --stage prod"
+    "deploy": "serverless deploy --verbose --stage test && serverless client deploy --verbose --no-confirm --no-delete-contents --stage test",
+    "deploy:prod": "serverless deploy --verbose --stage prod && serverless client deploy --verbose --no-confirm --no-delete-contents --stage prod"
   },
   "devDependencies": {
     "@types/jest": "27.0.3",
@@ -52,7 +52,6 @@
     "ts-loader": "9.2.6",
     "ts-node": "10.4.0",
     "tsutils": "3.21.0",
-    "typescript": "4.4.4",
     "typescript": "4.5.2",
     "url-loader": "4.1.1",
     "webpack": "5.64.4",
