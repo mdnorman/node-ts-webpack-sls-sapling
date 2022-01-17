@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
 
-const WEBPACK_SERVER_PORT = process.env.WEBPACK_SERVER_PORT || 5000;
+const WEBPACK_SERVER_PORT = process.env.WEBPACK_SERVER_PORT || 5001;
 
 const config = require('./webpack.config')({}, {});
 const options = {

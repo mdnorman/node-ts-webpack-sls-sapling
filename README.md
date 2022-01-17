@@ -49,7 +49,7 @@ Change the bucket to be used for logs in the `custom.logs.bucket` property in `s
 npm run server:development
 ```
 
-The server runs at [http://localhost:5000/](http://localhost:5000/).
+The server runs at [http://localhost:5001/](http://localhost:5001/).
 
 The port can be changed by setting the environment variable `WEBPACK_SERVER_PORT` to an open port.
 
