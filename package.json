@@ -26,8 +26,8 @@
     "lint": "eslint",
     "pretty": "pretty-quick",
     "server:development": "node dev-server.js",
-    "deploy": "serverless deploy --verbose --stage test && serverless client deploy --verbose --no-confirm --no-delete-contents --stage test",
-    "deploy:prod": "serverless deploy --verbose --stage prod && serverless client deploy --verbose --no-confirm --no-delete-contents --stage prod"
+    "deploy": "serverless deploy --verbose --stage test && serverless client deploy --verbose --no-confirm --no-delete-contents --no-policy-change --stage test",
+    "deploy:prod": "serverless deploy --verbose --stage prod && serverless client deploy --verbose --no-confirm --no-delete-contents --no-policy-change --stage prod"
   },
   "devDependencies": {
     "@types/jest": "27.4.0",
