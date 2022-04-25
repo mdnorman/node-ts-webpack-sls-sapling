@@ -1,20 +1,14 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const path = require('path');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-const webpack = require('webpack');
 
-const webpackConfig = (env) => {
-  const { mode } = env;
+const WEBPACK_SERVER_PORT = process.env.WEBPACK_SERVER_PORT || 5000;
+
+const webpackConfig = (env, argv) => {
+  const { mode } = argv;
   const production = mode === 'production';
   const development = !production;
   const analyze = false;
-  const filename = production ? '[name].[chunkhash].bundle.js' : '[name].[hash].bundle.js';
-
   const plugins = [new HtmlWebpackPlugin({ template: 'src/index.html.ejs' })];
-
-  if (development) {
-    plugins.push(new webpack.HotModuleReplacementPlugin());
-  }
 
   if (analyze) {
     plugins.push(
@@ -28,19 +22,21 @@ const webpackConfig = (env) => {
   return {
     entry: './src/index.ts',
     output: {
-      filename,
-      path: path.resolve(__dirname, './dist'),
+      filename: '[name].[contenthash].bundle.js',
       publicPath: '/',
     },
 
     devtool: 'source-map',
     devServer: {
-      contentBase: './dist',
+      allowedHosts: 'all',
       hot: true,
+      host: 'localhost',
+      historyApiFallback: true,
+      port: WEBPACK_SERVER_PORT,
     },
 
     resolve: {
-      extensions: ['.ts', '.js', '.json'],
+      extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
     },
 
     plugins,
