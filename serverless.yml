@@ -32,7 +32,7 @@ custom:
     dev: dev.${self:custom.baseDomainName}
     test: test.${self:custom.baseDomainName}
     prod: www.${self:custom.baseDomainName}
-  baseDomainName: ${custom.hostedZone}
+  baseDomainName: ${self:custom.hostedZone}
   hostedZone: CHANGEME.com
   logs:
     bucket: CHANGEME
