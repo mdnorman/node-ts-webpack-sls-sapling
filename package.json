@@ -37,7 +37,7 @@
     }
   },
   "devDependencies": {
-    "@types/jest": "29.0.3",
+    "@types/jest": "29.1.0",
     "@types/node": "16.11.62",
     "@typescript-eslint/eslint-plugin": "5.38.1",
     "@typescript-eslint/parser": "5.38.1",
@@ -58,7 +58,7 @@
     "source-map-loader": "4.0.0",
     "standard-version": "9.5.0",
     "style-loader": "3.3.1",
-    "ts-jest": "29.0.2",
+    "ts-jest": "29.0.3",
     "ts-loader": "9.4.1",
     "ts-node": "10.9.1",
     "tsutils": "3.21.0",
