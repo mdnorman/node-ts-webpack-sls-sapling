@@ -22,6 +22,16 @@ Many popular IDEs and editors support this out of the box or with a plugin.
 
 ## Development
 
+### Running the Local Server
+
+```
+npm run server:development
+```
+
+The server runs at [http://localhost:5001/](http://localhost:5001/).
+
+The port can be changed by setting the environment variable `WEBPACK_SERVER_PORT` to an open port.
+
 ### Prettier
 
 This project uses [Prettier](https://prettier.io/), so please run it before checking in:

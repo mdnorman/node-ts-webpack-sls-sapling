@@ -7,7 +7,7 @@
     "pretty": true,
     "module": "commonjs",
     "target": "es2015",
-    "lib": ["es6", "esnext.asynciterable"],
+    "lib": ["es6", "dom", "esnext.asynciterable"],
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
