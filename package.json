@@ -54,7 +54,7 @@
     "resolve-url-loader": "5.0.0",
     "sass-loader": "13.2.2",
     "serverless": "3.30.1",
-    "serverless-finch": "4.0.1",
+    "serverless-finch": "4.0.3",
     "source-map-loader": "4.0.1",
     "standard-version": "9.5.0",
     "style-loader": "3.3.2",
