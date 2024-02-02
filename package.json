@@ -55,7 +55,7 @@
     "sass-loader": "13.3.3",
     "serverless": "3.33.0",
     "serverless-finch": "4.0.3",
-    "source-map-loader": "4.0.1",
+    "source-map-loader": "4.0.2",
     "standard-version": "9.5.0",
     "style-loader": "3.3.3",
     "ts-jest": "29.1.1",
