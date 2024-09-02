@@ -59,7 +59,7 @@
     "standard-version": "9.5.0",
     "style-loader": "3.3.4",
     "ts-jest": "29.2.5",
-    "ts-loader": "9.4.4",
+    "ts-loader": "9.5.1",
     "ts-node": "10.9.2",
     "tsutils": "3.21.0",
     "typescript": "5.3.2",
