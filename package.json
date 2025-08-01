@@ -58,7 +58,7 @@
     "source-map-loader": "4.0.2",
     "standard-version": "9.5.0",
     "style-loader": "3.3.4",
-    "ts-jest": "29.3.4",
+    "ts-jest": "29.4.0",
     "ts-loader": "9.5.2",
     "ts-node": "10.9.2",
     "tsutils": "3.21.0",
